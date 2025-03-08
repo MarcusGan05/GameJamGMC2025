@@ -10,6 +10,5 @@ config_version=5
 
 [application]
 
-config/name="Not a gun mayhem clone"
+config/name="GMCproj"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
