@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://gop0bskwtg6m"]
+
+[ext_resource type="PackedScene" uid="uid://d1lraeeuvvu2k" path="res://scenes/bee.tscn" id="2_vbyki"]
+[ext_resource type="PackedScene" uid="uid://ny8n5n0les50" path="res://scenes/frog.tscn" id="3_vbyki"]
+[ext_resource type="PackedScene" uid="uid://wmg481j8kc7f" path="res://scenes/level.tscn" id="4_uj4qe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -1.0
+offset_right = 1023.0
+offset_bottom = 600.0
+color = Color(0.988235, 0.87451, 0.803922, 1)
+
+[node name="Level" parent="." instance=ExtResource("4_uj4qe")]
+position = Vector2(0, 35)
+
+[node name="characters" type="Node2D" parent="."]
+position = Vector2(-1, 0)
+
+[node name="bee" parent="characters" instance=ExtResource("2_vbyki")]
+position = Vector2(657, 288)
+scale = Vector2(5, 5)
+
+[node name="frog" parent="characters" instance=ExtResource("3_vbyki")]
+position = Vector2(401, 280)
+scale = Vector2(1, 1)

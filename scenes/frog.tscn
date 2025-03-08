@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ny8n5n0les50"]
+
+[ext_resource type="Script" uid="uid://d87hn12nhfvh" path="res://scenes/frog.gd" id="1_6ekd3"]
+[ext_resource type="Texture2D" uid="uid://f8x3ex53pnye" path="res://assets/environment/Platform Assets/Character/Character.png" id="1_whe2r"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6ekd3"]
+height = 26.0
+
+[node name="frog" type="CharacterBody2D"]
+script = ExtResource("1_6ekd3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_whe2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7.5)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("CapsuleShape2D_6ekd3")
